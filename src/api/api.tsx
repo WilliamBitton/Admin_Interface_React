@@ -1,28 +1,16 @@
 import { Product, Category } from "@/interface/interface";
 
-export async function getProductsData(id?: string) {
-  const url = id
-    ? `https://tp3-vpic.onrender.com/products/${id}`
-    : `https://tp3-vpic.onrender.com/products`;
-
-  const res = await fetch(url, {
+export async function getProductsData() {
+  const res = await fetch('https://tp3-vpic.onrender.com/products', {
     method: "GET",
     headers: {
       "Cache-Control": "no-cache",
     },
   });
-
   if (!res.ok) {
-    throw new Error("Échech de la récupération des données");
+    throw new Error("Échec de la récupération des données");
   }
-
-  const data = await res.json();
-
-  const products = Array.isArray(data)
-    ? data.map((product) => ({ ...product, id: product._id }))
-    : [];
-
-  return products;
+  return res.json();
 }
 
 export async function getProductData(id: string) {

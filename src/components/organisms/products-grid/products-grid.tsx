@@ -28,9 +28,7 @@ const ProductGrid = () => {
   const theme = useTheme();
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   
-  const [rows, setRows] = useState<
-    { id: string; title: string; description: string; price: number }[]
-  >([]);
+  const [rows, setRows] = useState<{ id: string; title: string; description: string; price: number }[]>([]);
   const [loading, setLoading] = useState(true);
   const [confirmDeleteOpen, setConfirmDeleteOpen] = useState(false);
   const [deleteProductId, setDeleteProductId] = useState<string | null>(null);
@@ -40,19 +38,25 @@ const ProductGrid = () => {
   const router = useRouter();
   
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getProductsData();
-        setRows(data);
+    setLoading(true);
+
+    getProductsData()
+      .then((data) => {
+        const categoryRows = data.products.map((product: { _id: any; name: any; title: string; description: string; price: number }) => ({
+          id: product._id,
+          name: product.name,
+          title: product.title,
+          description: product.description,
+          price: product.price
+        }));
+        setRows(categoryRows);
         setLoading(false);
-      } catch (error) {
-        console.error("Échec de la récupération des données :", error);
+      })
+      .catch((error) => {
+        console.error("Erreur dans l'extraction des données :", error);
         setRows([]);
         setLoading(false);
-      }
-    };
-
-    fetchData();
+      });
   }, []);
 
   const handleDeleteButtonClick = (params: GridCellParams) => {

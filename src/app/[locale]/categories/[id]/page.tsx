@@ -15,7 +15,7 @@ export default async function EditCategory({
   return (
     <>
       <Header title={t("categoriesmodifier.page-title")} />
-      <CategoryForm categoryData={categoryData} />
+      <CategoryForm categoryData={categoryData.id} />
     </>
   );
 }

@@ -21,22 +21,6 @@ import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-const schema = yup
-  .object({
-    name: yup
-      .string()
-      .min(
-        2,
-        "Le nom de la catégories doit contenir un minimum de 2 caractères"
-      )
-      .max(
-        50,
-        "Le nom de la catégorie ne doit pas contenir plus de 50 caractères"
-      )
-      .required(),
-  })
-  .required();
-
 export default function CategoryForm(props: CategoryFormProps) {
   const t = useTranslations();
   const [loading, setLoading] = React.useState(false);

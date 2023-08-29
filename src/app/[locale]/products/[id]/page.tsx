@@ -17,7 +17,7 @@ export default async function EditProduct({
   return (
     <>
       <Header title={t("produitmodifier.page-title")} />
-      <ProductForm productData={productData} categoriesData={categoriesData} />
+      <ProductForm productData={productData.product} categoriesData={categoriesData.categories} />
     </>
   );
 }

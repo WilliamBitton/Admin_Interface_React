@@ -21,7 +21,7 @@ export default async function AddProduct() {
   return (
     <>
       <Header title={t("produitajouter.page-title")} />
-      <ProductForm productData={productData} categoriesData={categoriesData} />
+      <ProductForm productData={productData} categoriesData={categoriesData.categories} />
     </>
   );
 }
