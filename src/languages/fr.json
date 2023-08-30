@@ -4,9 +4,9 @@
         "categories": "Catégories"
     },
     "accueil": {
-        "page-title": "TP3 INTÉGRATION",
+        "page-title": "Magasin de jouets",
         "subTitle": "Description du projet",
-        "desc": "Le projet consiste à créer une interface administrateur liée au back-end et à la base de données réalisées durant le cours de programmation.",
+        "desc": "Projet réalisé en équipe au cours des études de developpement web au cégep Garneau. Interface liée à l'API de magasin de jouets créee précédemment.",
         "team": "Liste des membres de l'équipe :"
     },
     "produits": {

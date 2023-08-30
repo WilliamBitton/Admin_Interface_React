@@ -4,9 +4,9 @@
         "categories": "Categories"
     },
     "accueil": {
-        "page-title": "INTEGRATION TP3",
+        "page-title": "Game store",
         "subTitle": "Project description",
-        "desc": "The project involves creating an administrator interface linked to the back-end and database created during the integration course.",
+        "desc": "Team project created during dev web course at cegep Garneau. Interface linked with the game store API created previously.",
         "team": "List of team members :"
     },
     "produits": {
