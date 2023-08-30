@@ -33,6 +33,7 @@
     "node": ">=16.8.0"
   },
   "devDependencies": {
-    "@mui/material": "5.13.6"
+    "@mui/material": "5.13.6",
+    "eslint": "8.48.0"
   }
 }

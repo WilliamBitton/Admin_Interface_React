@@ -104,6 +104,7 @@ export default function ProductForm(props: ProductFormProps) {
       setAlertSeverity("error");
       setAlertMessage(t("alertError.error"));
       setAlertOpen(true);
+      setLoading(false);
     } finally {
       setLoading(false);
     }
