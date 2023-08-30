@@ -11,7 +11,7 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "fr" }];
 }
 export const metadata = {
-  title: "TP3 Intégration",
+  title: "Game store",
   description:
     "Created by Nathan Thibault, Priscila Carvalho, Toufik Dellys, Marie-Pier Dubois, William Bitton",
 };
