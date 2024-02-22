@@ -30,7 +30,7 @@
     "yup": "1.2.0"
   },
   "engines": {
-    "node": "^18.0"
+    "node": "^16.8.0"
   },
   "devDependencies": {
     "@mui/material": "5.13.6",
